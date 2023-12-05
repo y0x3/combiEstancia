@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="login_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+  </head>
+  <body class="body">
+    <div class="login-page">
+      <div class="form">
+        <!--Titulo-->
+        <center><h1 class="title">Login</h1></center>
+        <!--Inicio de formulario-->
+        <form id="login-form">
+          <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_1nieVZ.json" background="transparent" speed="1" style="justify-content: center;" loop autoplay></lottie-player><br>
+          <input type="text" placeholder="&#xf007;  username" id="username"/>
+          <input type="password" id="password" placeholder="&#xf023;  password"/>
+          <i class="fas fa-eye" onclick="showPassword()"></i>
+          <br>
+          <br>
+          <button type="submit">LOGIN</button>
+          <p class="message"></p>
+        </form>
+
+        <form class="login-form">
+          <button type="button" onclick="window.location.href='signup.html'">SIGN UP</button>
+        </form>
+      </div>
+    </div>
+    <!--Fin de formulario-->
+    <!--validaciones y funciones-->
+    <script>
+      //mostrar contraseña en campo
+      function showPassword() {
+        var password = document.getElementById("password");
+        var icon = document.querySelector(".fas")
+
+        // ========== evaluar tipo de contraseña ===========
+        if(password.type === "password") {
+          password.type = "text";
+        } else {
+          password.type = "password";
+        }
+      }
+      //mandar los datos del formulario
+      document.getElementById("login-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+        validateForm();
+      });
+      //función para validar información
+      function validateForm() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        //que no haya campos vacios
+        if (username === "" || password === "") {
+          alert("Por favor ingresa ambos: Usuario y contraseña.");
+          return false;
+        }
+        //recibir los datos encriptados del objeto jsonData provenientes del SignIn
+        var urlParams = new URLSearchParams(window.location.search);
+        var jsonData = urlParams.get("jsonData");
+        //desencriptar los datos recibidos y guardarlos en data
+        if (jsonData) {
+          var data = JSON.parse(decodeURIComponent(jsonData));
+        //comparar el username ingresado con el guardado, al igual que la contraseña.
+          if (username === data.pick && password === data.password) {
+            alert("Login exitoso!");
+            // Aquí puedes redireccionar al usuario a la página de inicio de sesión exitosa
+            window.location.href = 'combis/index.html';
+            //mensajes de alerta
+          } else {
+            alert("Nombre de usuario o contraseña invalido");
+          }
+        } else {
+          alert("datos más validos");
+        }
+
+        return false;
+      }
+    </script>
+  </body>
+</html>

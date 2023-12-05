@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .detalleReserva {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        p {
+            color: #555;
+            margin: 10px 0;
+        }
+
+        #infoAsientosReservados {
+            font-weight: bold;
+            color: #e44d26; /* Color naranja, puedes cambiarlo según tu preferencia */
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #e44d26;
+            color: #fff;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #333;
+        }
+    </style>
+    <title>Detalles de la Reserva</title>
+</head>
+<body>
+    <div class="detalleReserva">
+        <h1>Detalles de la Reserva</h1>
+        
+        <!-- Mostrar información de la reserva -->
+        <p><strong>Asientos Reservados:</strong> <span id="infoAsientosReservados"></span></p>
+        
+        <!-- Botón para consultar la reserva -->
+        <button onclick="window.location.href='inicio.html'">regresar</button>
+        <button onclick="cancelarReserva()">Cancelar Reserva</button>
+
+<script>
+    function cancelarReserva() {
+        // Muestra una alerta indicando que se canceló la reserva
+        alert('Se canceló la reserva');
+        
+        // Redirige a inicio.html después de la alerta
+        window.location.href = 'inicio.html';
+    }
+</script>
+        <!-- Agrega más información según tus necesidades -->
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="detalle_reserva.js"></script>
+</body>
+</html>
+

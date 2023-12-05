@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="asientos.css">
+    <title>Sistema de Reserva de Asientos</title>
+</head>
+<body>
+    <div class="CompCombi">
+        <h1>ASIENTOS</h1>
+    </div>
+    <div class="infoTransporte">
+      <h2>Información del Transporte</h2>
+      <p><strong>ID del Transporte:</strong> <span id="infoIdTransporte"></span></p>
+      <p><strong>Destino:</strong> <span id="infoDestino"></span></p>
+      <p><strong>Hora de Salida:</strong> <span id="infoHoraSalida"></span></p>
+      <!-- Agrega más información según tus necesidades -->
+  </div>
+    <div class="tablaAsientos">
+        <table>
+            <!-- ... tu contenido de la tabla ... -->
+            <tr>
+                <td><button  class="btnAsiento" data-numero="1" name="btnA1"id="btnA1">A1</button></td>
+                <td><button  class="btnAsiento" data-numero="2" name="btnA2" id="btnA2">A2</button></td>
+                <td><button  class="btnAsiento" data-numero="3" name="btnA3" id="btnA3">A3</button></td>
+                <td><button  class="btnAsiento" data-numero="4" name="btnA4" id="btnA4">A4</button></td>
+              </tr>
+              <tr>
+                <td><button   class="btnAsiento" data-numero="5" name="btnA5"id="btnA5">A5</button></td>
+                <td>&nbsp;</button></td>
+                <td>&nbsp;</button></td>
+                <td><button  class="btnAsiento" data-numero="8" name="btnA8" id="btnA8">A8</button></td>
+              </tr>
+              <tr>
+                <td><button  class="btnAsiento" data-numero="6" name="btnA6" id="btnA6">A6</button></td>
+                <td>&nbsp;</button></td>
+                <td>&nbsp;</button></td>
+                <td><button  class="btnAsiento" data-numero="9"  name="btnA9" id="btnA9">A9</button></td>
+              </tr>
+              <tr>
+                <td><button  class="btnAsiento" data-numero="7"  name="btnA7" id="btnA7">A7</button></td>
+                <td>&nbsp;</button></td>
+                <td>&nbsp;</button></td>
+                <td><button  class="btnAsiento" data-numero="10" name="btnA10" id="btnA10">A10</button></td>
+              </tr>
+              <tr>
+                <td>&nbsp;</button></td>
+                <td>&nbsp;</button></td>
+                <td>&nbsp;</button></td>
+                <td><button  class="btnAsiento" data-numero="11" name="btnA11" id="btnA11">A11</button></td>
+              </tr>
+              <tr>
+                <td><button  class="btnAsiento" data-numero="12" name="btnA12" id="btnA12">A12</button></td>
+                <td><button  class="btnAsiento" data-numero="13" name="btnA13" id="btnA13">A13</button></td>
+                <td><button  class="btnAsiento" data-numero="14" name="btnA14" id="btnA14">A14</button></td>
+                <td><button  class="btnAsiento" data-numero="15" name="btnA15" id="btnA15">A15</button></td>
+              </tr>
+              <tr>
+                <td><button  class="btnAsiento" data-numero="16" name="btnA16" id="btnA16">A16</button></td>
+                <td><button  class="btnAsiento" data-numero="17" name="btnA17" id="btnA17">A17</button></td>
+                <td>&nbsp;</td>
+                <td><img src="img/conductor.png" id="conductor"></td>
+              </tr>
+        </table>
+        <br>
+      
+        <!-- Este botón llama a la función guardarAsientosEnBaseDeDatos con el idTransporte -->
+<button onclick="guardarAsientosEnBaseDeDatos('<?php echo json_encode($idTransporte); ?>')">Confirmar</button>
+
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="asiento.js"></script>
+
+
+</body>
+</html>
+

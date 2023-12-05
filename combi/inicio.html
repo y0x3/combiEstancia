@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="inicio.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transportes</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <div class="CompCombi">
+    <h2>HORARIOS</h2>
+    </div>
+    <div class="CompCombi">
+        <button onclick="window.location.href='reserva.html'">Consultar Reserva</button>
+    </div>
+    <div id="transportesContainer">
+        <!-- Aquí se mostrarán los transportes cargados dinámicamente -->
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            // Realizar la solicitud AJAX al cargar la página
+            $.ajax({
+                url: 'inicio.php', // Nombre del archivo PHP
+                method: 'GET',
+                success: function(response) {
+                    // Mostrar la respuesta en el contenedor
+                    $('#transportesContainer').html(response);
+                },
+                error: function() {
+                    alert('Error al cargar los transportes.');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
+
+
+
+

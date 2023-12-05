@@ -1,0 +1,146 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+.asientoSeleccionado {
+    background-color: green; /* Puedes ajustar el color según tus necesidades */
+    color: white; /* Puedes ajustar el color del texto según tus necesidades */
+}
+
+.infoTransporte {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f4f4f4;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.infoTransporte h2 {
+    color: #333;
+}
+
+.infoTransporte p {
+    margin: 10px 0;
+}
+
+.infoTransporte strong {
+    color: #555;
+}
+
+.infoTransporte span {
+    font-weight: bold;
+    color: #777;
+}
+.tablaAsientos {
+    width: 30%;
+    margin: 20px auto;
+    border: 2px solid #333; /* Borde oscuro para la tabla */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 15px; /* Espaciado interno */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para resaltar */
+    text-align: center;
+    background-image: url('img/fondocombi.jpg'); /* Reemplaza 'ruta_de_tu_imagen.jpg' con la ruta correcta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px; 
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+button {
+    width: 60px;
+    height: 40px;
+   background-color: #0000002d;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+
+img{
+    width: 10%;
+}
+
+.Confirmar {
+    width: 150px;
+    height: 40px;
+    background-color: #cc9df3;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.ConLugar:hover {
+    background-color: #219d54;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.shape {
+    width: 200px;
+    height: 100px;
+    background-color: #3498db;
+    border-radius: 0 0 10px 10px; /* Esquinas inferiores redondeadas */
+    position: relative;
+}
+
+.square {
+    width: 50px;
+    height: 50px;
+    background-color: #e74c3c;
+    border-radius: 10px; /* Bordes redondeados */
+    position: absolute;
+    bottom: -25px; /* Ajuste para superponer en la parte inferior del rectángulo */
+    left: 75px; /* Ajuste para centrar el cuadrado en el rectángulo */
+}
+
+.CompCombi {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f4f4f4;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+
+#conductor{
+    width: 50%; /* Ajusta el ancho según tus necesidades */
+    height: 50px; /* Mantiene la proporción de la imagen */
+    /* Otros estilos opcionales */
+}
+
